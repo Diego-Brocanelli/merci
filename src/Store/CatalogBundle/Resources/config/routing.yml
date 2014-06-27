@@ -1,0 +1,3 @@
+store_catalog_homepage:
+    path:     /
+    defaults: { _controller: StoreCatalogBundle:Catalog:index }
