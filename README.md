@@ -1,4 +1,4 @@
 Merci
 =====
 
-Symfony Full-Stack E-Commerce system
+Bootstrap e-Commerce system for Symfony
