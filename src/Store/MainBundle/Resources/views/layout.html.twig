@@ -1,7 +1,12 @@
 {% extends '::base.html.twig' %}
 
 {% block body %}
-    <h1>Merci Store</h1>
+    <nav class="ui menu">
+        <h1 class="header item">Merci Store</h1>
+        <a href="{{ path('store_catalog_homepage') }}" class="active item">
+            <i class="desktop icon"></i> Catalog
+        </a>
+    </nav>
 
     {% block content %}{% endblock %}
 {% endblock %}
