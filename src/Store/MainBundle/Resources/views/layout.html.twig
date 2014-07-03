@@ -3,7 +3,10 @@
 {% block body %}
     <nav class="ui menu">
         <h1 class="header item">Merci Store</h1>
-        <a href="{{ path('store_catalog_homepage') }}" class="active item">
+        <a href="{{ path('store_main_home') }}" class="item">
+            <i class="home icon"></i> Home
+        </a>
+        <a href="{{ path('store_catalog_index') }}" class="item">
             <i class="desktop icon"></i> Catalog
         </a>
     </nav>

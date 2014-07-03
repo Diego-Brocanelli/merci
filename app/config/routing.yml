@@ -1,3 +1,7 @@
+store_main:
+    resource: "@StoreMainBundle/Resources/config/routing.yml"
+    prefix:   /
+
 store_catalog:
     resource: "@StoreCatalogBundle/Resources/config/routing.yml"
-    prefix:   /
+    prefix:   /catalog

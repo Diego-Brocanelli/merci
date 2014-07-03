@@ -8,6 +8,6 @@ class CatalogController extends Controller
 {
     public function indexAction()
     {
-        return $this->render('StoreCatalogBundle::index.html.twig');
+        return $this->render('StoreCatalogBundle::catalog.html.twig');
     }
 }
