@@ -1,0 +1,11 @@
+.main .right.menu {
+    display: none;
+}
+
+.smartphone .main a.item {
+    display: none;
+}
+
+.smartphone .main .right.menu {
+    display: inline-block;
+}
