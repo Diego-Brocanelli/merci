@@ -1,15 +1,16 @@
 {% extends '::base.html.twig' %}
 
 {% block body %}
-    <nav class="main ui menu">
+    <header class="ui menu">
         <h1 class="header item">Merci Store</h1>
-        <div class="right menu">
-            <div class="item">
-                <div class="ui icon button">
-                    <i class="large content basic icon"></i>
-                </div>
-            </div>
-        </div>
+        <nav class="right menu">
+            <a class="ui item icon button">
+                <i class="reorder icon"></i>
+            </a>
+        </nav>
+    </header>
+
+    <nav class="ui left sidebar inverted vertical menu">
         <a class="item" href="{{ path('store_main_home') }}">
             <i class="home icon"></i> Home
         </a>

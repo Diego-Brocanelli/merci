@@ -1,11 +1,41 @@
-.main .right.menu {
-    display: none;
+/* =================================
+   Default styles / Mobile First
+   ================================= */
+
+/* -----------------------
+   Reset
+-------------------------- */
+body {
+    font-family: 'Open Sans', sans-serif;
 }
 
-.smartphone .main a.item {
-    display: none;
+/* =================================
+   Media Queries
+   ================================= */
+
+/* -----------------------
+   Smartphones landscape
+-------------------------- */
+@media only screen and (min-width: 480px) {
+    h1:before {
+        content: "Smartphones landscape - ";
+    }
 }
 
-.smartphone .main .right.menu {
-    display: inline-block;
+/* -----------------------
+   Tablets
+-------------------------- */
+@media only screen and (min-width: 768px) {
+    h1:before {
+        content: "Tablets - ";
+    }
+}
+
+/* -----------------------
+   Desktops and Laptops
+-------------------------- */
+@media only screen and (min-width: 1140px) {
+    h1:before {
+        content: "Desktops and laptops - ";
+    }
 }

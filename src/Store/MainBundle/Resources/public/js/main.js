@@ -1,14 +1,20 @@
-var app = {
+var store = {
     init: function() {
-        app.action.viewportUpdate();
-        app.action.windowResize();
+        store.global.viewportUpdate();
+        store.global.windowResize();
+
+        if ($('body').hasClass('smartphone')) {
+            store.mobile.toggleMenu();
+        }
     },
-    action: {
+
+    global: {
         windowResize: function() {
             $(window).resize(function() {
-                app.action.viewportUpdate();
+                store.global.viewportUpdate();
             });
         },
+
         viewportUpdate: function() {
             var windowWidth = $(window).width();
             var elemBody = $('body');
@@ -29,9 +35,19 @@ var app = {
                 elemBody.removeClass().addClass('desktop');
             }
         }
+    },
+
+    mobile: {
+        toggleMenu: function() {
+            $('header.menu .item.button').click(function() {
+                $('.sidebar')
+                    .sidebar({overlay: true})
+                    .sidebar('toggle');
+            });
+        }
     }
 };
 
 $(function () {
-    app.init();
+    store.init();
 });
