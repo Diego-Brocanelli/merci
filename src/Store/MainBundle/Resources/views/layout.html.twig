@@ -1,22 +1,29 @@
 {% extends '::base.html.twig' %}
 
+{% set menu %}
+    <a class="item" href="{{ path('store_main_home') }}">
+        <i class="home icon"></i> Home
+    </a>
+    <a class="item" href="{{ path('store_catalog_index') }}">
+        <i class="grid layout icon"></i> Catalog
+    </a>
+{% endset %}
+
 {% block body %}
-    <header class="ui menu">
+    <header class="ui inverted menu">
         <h1 class="header item">Merci Store</h1>
+        <nav class="main">
+            {{ menu }}
+        </nav>
         <nav class="right menu">
-            <a class="ui item icon button">
+            <a class="ui item black icon button">
                 <i class="reorder icon"></i>
             </a>
         </nav>
     </header>
 
-    <nav class="ui left sidebar inverted vertical menu">
-        <a class="item" href="{{ path('store_main_home') }}">
-            <i class="home icon"></i> Home
-        </a>
-        <a class="item" href="{{ path('store_catalog_index') }}">
-            <i class="grid layout icon"></i> Catalog
-        </a>
+    <nav class="ui left thin sidebar inverted vertical menu">
+        {{ menu }}
     </nav>
 
     {% block content %}{% endblock %}
