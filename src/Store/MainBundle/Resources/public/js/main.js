@@ -3,7 +3,7 @@ var store = {
         store.global.viewportUpdate();
         store.global.windowResize();
 
-        if ($('body').hasClass('smartphone')) {
+        if ($('body').hasClass('mobile')) {
             store.mobile.toggleMenu();
         }
     },
@@ -20,11 +20,11 @@ var store = {
             var elemBody = $('body');
 
             if (windowWidth < 480) {
-                elemBody.removeClass().addClass('smartphone');
+                elemBody.removeClass().addClass('mobile');
             }
 
             if (windowWidth >= 480) {
-                elemBody.removeClass().addClass('smartphone landscape');
+                elemBody.removeClass().addClass('mobile landscape');
             }
 
             if (windowWidth >= 768) {

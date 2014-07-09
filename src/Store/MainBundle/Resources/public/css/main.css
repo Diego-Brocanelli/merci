@@ -2,6 +2,36 @@
    DEFAULT STYLES / MOBILE FIRST
    ===================================================== */
 
+/* Debug box ------------------------------------------- */
+
+#debug {
+    bottom: 0;
+    left: 0;
+    position: fixed;
+}
+
+#debug .icon {
+    display: none;
+}
+
+.mobile #debug .mobile,
+.tablet #debug .tablet,
+.desktop #debug .desktop {
+    display: inline-block;
+}
+
+.mobile #debug:after {
+    content: "Mobile";
+}
+
+.tablet #debug:after {
+    content: "Tablet";
+}
+
+.desktop #debug:after {
+    content: "Desktop";
+}
+
 /* Reset ----------------------------------------------- */
 
 body {
@@ -24,15 +54,11 @@ header.menu .main {
    MEDIA QUERIES
    ===================================================== */
 
-/* Smartphones landscape ------------------------------- */
+/* Mobile (landscape) ---------------------------------- */
 
-@media only screen and (min-width: 480px) {
-    h1:before {
-        content: "Smartphones landscape - ";
-    }
-}
+@media only screen and (min-width: 480px) {}
 
-/* Tablets --------------------------------------------- */
+/* Tablet ---------------------------------------------- */
 
 @media only screen and (min-width: 768px) {
 
@@ -47,6 +73,6 @@ header.menu .main {
     }
 }
 
-/* Desktops and Laptops -------------------------------- */
+/* Desktop --------------------------------------------- */
 
 @media only screen and (min-width: 1140px) {}
